@@ -1,0 +1,97 @@
+@startuml classes
+
+
+    namespace Anser.SolarAndWindPotential {
+
+        class SolarPotential {
+            string siteName : "Nom du site"
+            float solarRadiation : "Rayonnement solaire [KWh/m 2 /jour]"
+            geometry geom : "Données géographique"            
+        }
+
+        class WindPotential {
+            string siteName : "Nom du site"
+            float windSpeed : "Rayonnement vent [m/s]"
+            geometry geom : "Données géographique"
+        }
+
+        circle circle6
+
+
+    }
+
+    namespace Anser.DrinkingWaterSupply #32A1B2 {
+        
+        class DistributionNetwork {
+            string wording : "Denomination"
+            geometry geom : "Données géographique"
+        }
+
+        class Fountain {
+            string wording : "Denomination"
+            geometry geom : "Données géographique"
+        }
+
+        circle circle7
+    }
+
+    namespace Anser.Health #3271F2 {
+        circle circle8
+
+        class HealthZone {
+            string name : "Nom Zone de santé"
+            int population : "population de la Zone de santé"
+            geometry geom : "Données géographique"
+
+        }
+
+        class HealthInstitution {
+            string name : "Nom Etablissement de santé"
+            geometry geom : "Données géographique"
+            float accommodationCapacity : "Capacité d’accueil de l’établissement [nombre de personnes]"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+
+        }
+
+        class HealthInstitutionCategory {
+            string name : "Nom Catégory  Etablissement de santé"
+
+        }
+
+        class HealthInstitutionService {
+            string name : "Nom Service  Etablissement de santé"
+
+        }
+
+    }
+
+
+    namespace Anser.Education #F271F2 {
+        circle circle9
+
+        class EducationInstitution {
+            string name : "Nom Etablissement "
+            geometry geom : "Données géographique"
+            float accommodationCapacity : "Capacité d’accueil de l’établissement [nombre de personnes]"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+
+        }
+
+        class EducationInstitutionCategory {
+            string name : "Nom Catégory  Etablissement"
+        }
+
+    }
+    namespace Anser.PlacesOfWorship #F27132 {
+        circle circle10
+
+        class PlaceOfWorship {
+            string name : "Nom du lieu"
+            geometry geom : "Données géographique"
+            float accommodationCapacity : "Capacité d’accueil de l’établissement [nombre de personnes]"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+
+        }
+
+    }
+@enduml

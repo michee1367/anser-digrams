@@ -9,23 +9,14 @@
     Anser.ExistingPlants.ExistingPlant "many" -left-> "1" Anser.ExistingPlants.OwnerAndOrOSER
 
 
-    Anser.ExistingPowerLines.PowerLine "many" -left-> "many" Anser.ExistingPowerLines.PowerLineType
-    Anser.ExistingPowerLines.PowerLine "many" -right-> "many" Anser.ExistingPowerLines.Nature
-
 
     Anser.IndividualSets.IndividualSet "many" -down-> "many" Anser.EntityAdministration.Territory
     Anser.IndividualSets.IndividualSet "many" -down-> "many" Anser.EntityAdministration.Sector
     Anser.IndividualSets.IndividualSet "many" -down-> "many" Anser.EntityAdministration.Locality
 
 
-    Anser.Hydroelectricotential.Hydroelectricotential "many" -up-> "many" Anser.EntityAdministration.Locality
+    Anser.Hydroelectricotential.Hydroelectricotential "many" -down-> "many" Anser.EntityAdministration.Locality
 
-    Anser.Health.HealthZone "1" <-up- "many" Anser.Health.HealthInstitution
-    Anser.Health.HealthInstitutionCategory "1" <-up- "many" Anser.Health.HealthInstitution
-    Anser.Health.HealthInstitutionService "1" <-up- "many" Anser.Health.HealthInstitution
-
-    Anser.Telecommunication.TelecommunicationOperator "1" <-up- "many" Anser.Telecommunication.TelecommunicationNetworkAccessPoint
-    Anser.Telecommunication.TelecommunicationOperator "1" <-down- "many" Anser.Telecommunication.MobileSubscriberBase
 
     Anser.WaysOfCommunication.WayOfCommunicationType "1" <-left- "many" Anser.WaysOfCommunication.WayOfCommunication
     Anser.WaysOfCommunication.ModeOfTransport "1" <-right- "many" Anser.WaysOfCommunication.WayOfCommunication
@@ -34,10 +25,6 @@
     Anser.WaysOfCommunication.WayOfCommunication "1" <-down- "many" Anser.WaysOfCommunication.AccessibleSection
     Anser.WaysOfCommunication.WayOfCommunication "1" <-up- "many" Anser.EntityAdministration.Locality
 
-
-    Anser.LocalEconomy.EconomicActivityType "1" <-up- "many" Anser.LocalEconomy.EconomicActivity
-    Anser.LocalEconomy.Equipment "many" <-up- "many" Anser.LocalEconomy.EconomicActivity
-    Anser.LocalEconomy.ConsumptionCenter "many" <-down- "many" Anser.LocalEconomy.EconomicActivity
 
     Anser.Projects.ProjectType "1" <-up- "many" Anser.Projects.Project
     Anser.Projects.ProjectState "1" <-down- "many" Anser.Projects.Project

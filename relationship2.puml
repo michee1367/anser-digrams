@@ -1,0 +1,19 @@
+@startuml relationShip
+
+
+
+    Anser.ExistingPowerLines.PowerLine "many" -left-> "many" Anser.ExistingPowerLines.PowerLineType
+    Anser.ExistingPowerLines.PowerLine "many" -right-> "many" Anser.ExistingPowerLines.Nature
+    
+    Anser.Health.HealthZone "1" <-up- "many" Anser.Health.HealthInstitution
+    Anser.Health.HealthInstitutionCategory "1" <-up- "many" Anser.Health.HealthInstitution
+    Anser.Health.HealthInstitutionService "1" <-up- "many" Anser.Health.HealthInstitution
+
+    Anser.Telecommunication.TelecommunicationOperator "1" <-up- "many" Anser.Telecommunication.TelecommunicationNetworkAccessPoint
+    Anser.Telecommunication.TelecommunicationOperator "1" <-down- "many" Anser.Telecommunication.MobileSubscriberBase
+
+    Anser.LocalEconomy.EconomicActivityType "1" <-up- "many" Anser.LocalEconomy.EconomicActivity
+    Anser.LocalEconomy.Equipment "many" <-up- "many" Anser.LocalEconomy.EconomicActivity
+    Anser.LocalEconomy.ConsumptionCenter "many" <-down- "many" Anser.LocalEconomy.EconomicActivity
+
+@enduml

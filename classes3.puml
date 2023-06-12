@@ -1,0 +1,146 @@
+@startuml classes
+
+    namespace Anser.Telecommunication #F2F132 {
+        circle circle11
+
+        class TelecommunicationOperator {
+            string name : "Nom de l'opérateur "
+
+        }
+
+        class TelecommunicationNetworkAccessPoint {
+            geometry geom : "Données géographique"
+            string telephoneNetworkQuality : "Données géographique"
+            string internetNetworkQuality : "Données géographique"
+            boolean hasAccessToInternetServices() :  "Message pour demander s'il y a Données géographique accès aux services Internet"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+
+        }
+
+        class MobileSubscriberBase {
+            geometry geom : "Données géographique"
+        }
+    }
+
+    namespace Anser.WaysOfCommunication #22F1A2 {
+        circle circle12
+        
+
+        class WayOfCommunication {
+            float length : "Longueur Voies de communication"
+            float tonnage : "Tonnage"
+            geometry geom : "Données géographique"
+        }
+
+        class WayOfCommunicationType {
+            string name : "Nom du type de voie"
+        }
+        class ModeOfTransport {
+            string name : "Nom Mode de transport ou véhicules d’usage" 
+        }
+        class AccessibleSection {
+            string wording : "Dénomination Tronçon accessible ou fonctionnel"
+            geometry geom : "Données géographique"
+
+        }
+        class RoadSurface {
+            wording : "Dénomination Revêtement de la route"
+        }
+    }
+
+    namespace Anser.LocalEconomy #527152 {
+        circle circle13
+
+        
+
+        class EconomicActivity {
+            float currentProduction : "Production actuelle [quantité en kg,tonne…]"
+            float potentialProduction : "Production potentielle [quantité en kg,tonne…]"
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+        class EconomicActivityType {
+            string wording : "Dénomination du Type Activité économique"
+        }
+
+        class Equipment {
+            string wording : "Dénomination Équipements disponibles"
+        }
+        class ConsumptionCenter {
+            geometry geom : "Données géographique"
+            string wording : "Dénomination Centres de consommation pour l’évacuation des produits"
+        }
+    }
+
+    namespace Anser.Projects #62FFF2 {
+        circle circle14
+
+        class Project {
+            string wording : "Denomination du Projet"
+            float plannedPowerForHouseholds : "Puissance planifiée pour ménages [KW]"
+            float plannedPowerForProductive : "Puissance planifiée pour usage productif/ industriel [KW]"
+            geometry geom : "Données géographique"
+            int nbrHouseholds : "nombre de ménages connectés"
+            
+        }
+        class ProjectType {
+            string wording : "Denomination du type de Projet"
+        }
+        class ProjectState {
+            string wording : "Denomination État du projet"
+        }
+        class Line {
+            string wording : "Denomination de la lignes associées"
+            geometry geom : "Données géographique"
+        }
+        class Substations {
+            string wording : "Denomination de la sous-stations associées"
+            geometry geom : "Données géographique"
+        }
+        class Transformers {
+            string wording : "Denomination du transformateurs"
+            geometry geom : "Données géographique"
+        }
+        class ProgressStatus {
+            string wording : "Denomination Statut d’avancement"
+        }
+    }
+
+    namespace Anser.MultiSectorData #A2A502 {
+
+        class SME {
+            float wording : "Dénomination PME "
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+        class FishingAreas {
+            float wording : "Dénomination Zones de pêche "
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+        class Industry {
+            float wording : "Dénomination Industrie (ZES) "
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+        class ICCN {
+            float wording : "Dénomination ICCN "
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+        class MiningAreas {
+            float wording : "Dénomination Zones minières "
+            geometry geom : "Données géographique"
+            float estimatedConsumption : "Consommation estimée lorsqu’existante"
+        }
+
+
+    }
+
+
+@enduml

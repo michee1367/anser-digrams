@@ -1,0 +1,22 @@
+{
+	"name":"Anser.ExistingPlants.ExistingPlantType",
+    "normalName":"Types de centrales existantes",
+	"geoType":"AUCUN",
+	"props":[
+        {
+            "name":"name",
+            "type":"scalar"
+        }
+    ],
+    "schema":{
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties":{
+            "name": {
+                "type": "string"
+            }
+        },
+        "required": ["name"]
+
+    }
+}

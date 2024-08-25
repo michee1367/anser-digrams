@@ -1,0 +1,36 @@
+{
+	"name":"Anser.EntityAdministration.Province",
+    "normalName":"Provinces",
+	"geoType":"POLYGON",
+	"props":[
+        {
+            "name":"name",
+            "type":"scalar"
+        },
+        {
+            "name":"population",
+            "type":"scalar"
+        },
+        {
+            "name":"surface",
+            "type":"scalar"
+        }
+    ],
+    "schema":{
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties":{
+            "name": {
+                "type": "string"
+            },
+            "population": {
+                "type": "number"
+            },
+            "surface": {
+                "type": "number"
+            }
+        },
+        "required": ["name", "population", "surface" ]
+
+    }
+}

@@ -1,0 +1,45 @@
+{
+	"name":"Anser.EntityAdministration.City",
+    "normalName":"Villes",
+	"geoType":"POLYGON",
+	"props":[
+        {
+            "name":"name",
+            "type":"scalar"
+        },
+        {
+            "name":"population",
+            "type":"scalar"
+        },
+        {
+            "name":"surface",
+            "type":"scalar"
+        },
+        {
+            "name":"province",
+            "type":"relationship",
+            "otherEntity":"Anser.EntityAdministration.Province"
+        }
+		
+    ],
+    "schema":{
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties":{
+            "name": {
+                "type": "string"
+            },
+            "population": {
+                "type": "number"
+            },
+            "surface": {
+                "type": "number"
+            },
+            "province": {
+                "type": "number"
+            }
+        },
+        "required": ["name", "population", "surface", "province" ]
+
+    }
+}

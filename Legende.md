@@ -6,6 +6,8 @@
 - Anser.EntityAdministration.Province : Province [Fait]
 - Anser.EntityAdministration.Territory : Territoire [Fait]
 - Anser.EntityAdministration.City : Ville [Fait]
+- Anser.EntityAdministration.Town : Commune [Fait]
+- Anser.EntityAdministration.RuralTown : Commune Rural [Fait]
 - Anser.EntityAdministration.Locality : Localité [Fait]
 - Anser.EntityAdministration.Sector : Secteur [Fait]
 

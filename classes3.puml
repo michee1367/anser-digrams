@@ -14,7 +14,6 @@
             string internetNetworkQuality : "Données géographique"
             boolean hasAccessToInternetServices() :  "Message pour demander s'il y a Données géographique accès aux services Internet"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
-
         }
 
         class MobileSubscriberBase {
@@ -25,7 +24,6 @@
     namespace Anser.WaysOfCommunication #22F1A2 {
         circle circle12
         
-
         class WayOfCommunication {
             float length : "Longueur Voies de communication"
             float tonnage : "Tonnage"
@@ -50,9 +48,7 @@
 
     namespace Anser.LocalEconomy #527152 {
         circle circle13
-
-        
-
+                
         class EconomicActivity {
             float currentProduction : "Production actuelle [quantité en kg,tonne…]"
             float potentialProduction : "Production potentielle [quantité en kg,tonne…]"
@@ -110,31 +106,31 @@
     namespace Anser.MultiSectorData #A2A502 {
 
         class SME {
-            float wording : "Dénomination PME "
+            string wording : "Dénomination PME "
             geometry geom : "Données géographique"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
         }
 
         class FishingAreas {
-            float wording : "Dénomination Zones de pêche "
+            string wording : "Dénomination Zones de pêche "
             geometry geom : "Données géographique"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
         }
 
         class Industry {
-            float wording : "Dénomination Industrie (ZES) "
+            string wording : "Dénomination Industrie (ZES) "
             geometry geom : "Données géographique"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
         }
 
         class ICCN {
-            float wording : "Dénomination ICCN "
+            string wording : "Dénomination ICCN "
             geometry geom : "Données géographique"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
         }
 
         class MiningAreas {
-            float wording : "Dénomination Zones minières "
+            string wording : "Dénomination Zones minières "
             geometry geom : "Données géographique"
             float estimatedConsumption : "Consommation estimée lorsqu’existante"
         }

@@ -1,0 +1,73 @@
+{
+	"name":"Anser.ExistingPlants.ExistingPlant",
+    "normalName":"Centrales existantes",
+	"geoType":"POINT",
+	"props":[
+        {
+            "name":"name",
+            "type":"scalar"
+        },
+        {
+            "name":"availablePower",
+            "type":"scalar"
+        },
+        {
+            "name":"installedPower",
+            "type":"scalar"
+        },
+        {
+            "name":"nbrOfhouseholds",
+            "type":"scalar"
+        },
+        {
+            "name":"powerOfhouseholds",
+            "type":"scalar"
+        },
+        {
+            "name":"powerForProductiveUsed",
+            "type":"scalar"
+        },
+        {
+            "name":"type",
+            "type":"relationship",
+            "otherEntity":"Anser.ExistingPlants.ExistingPlantType"
+        }
+    ],
+    "schema":{
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties":{
+            "name": {
+                "type": "string"
+            },
+            "availablePower": {
+                "type": "number"
+            },
+            "installedPower": {
+                "type": "number"
+            },
+            "nbrOfhouseholds": {
+                "type": "number"
+            },
+            "powerOfhouseholds": {
+                "type": "number"
+            },
+            "powerForProductiveUsed": {
+                "type": "number"
+            },
+            "type": {
+                "type": "number"
+            }
+        },
+        "required": [
+            "name", 
+            "availablePower", 
+            "installedPower", 
+            "nbrOfhouseholds",
+            "powerOfhouseholds",
+            "powerForProductiveUsed",
+            "type"
+        ]
+
+    }
+}
